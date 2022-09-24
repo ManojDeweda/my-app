@@ -1,11 +1,11 @@
 import { Link, Outlet } from "react-router-dom";
 import React from "react";
-function Header() {
+function AdminLayout() {
   return (
     <>
-      <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
+      <nav className="navbar navbar-expand-sm bg-primary navbar-success">
         <div className="container-fluid">
-          <p className="navbar-brand">Employee App</p>
+          <p className="navbar-brand">Admin View </p>
           <button
             className="navbar-toggler"
             type="button"
@@ -18,7 +18,7 @@ function Header() {
             <ul className="navbar-nav">
               <li className="nav-item">
                 <Link className="nav-link" to="/Employee/list">
-                  Employee List
+                  Employee cards
                 </Link>
               </li>
               <li className="nav-item">
@@ -28,8 +28,8 @@ function Header() {
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link" to="/employee/details/list">
-                  EmpDetail List
+                <Link className="nav-link" to="/employee/details/card">
+                  EmpDetail card
                 </Link>
               </li>
             </ul>
@@ -41,4 +41,4 @@ function Header() {
     </>
   );
 }
-export default Header;
+export default AdminLayout;

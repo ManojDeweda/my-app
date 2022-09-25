@@ -72,7 +72,7 @@ function EmpCard() {
         </div>
       </div>
 
-      <div className="row justify-content-center" style={{ height: "300px" }}>
+      <div className="row justify-content-center" style={{ height: "150px" }}>
         <div
           className="col-12 col-md-0 h3 "
           style={{ fontFamily: "cursive", textAlign: "center" }}

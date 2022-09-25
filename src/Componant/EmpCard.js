@@ -2,11 +2,13 @@ import { Avatar } from "@mui/material";
 import { useEffect, useState } from "react";
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-
+import { useLocation } from "react-router-dom";
 import axios from "axios";
 function EmpCard() {
   const [responseData, setResponseData] = useState([]);
+  const EmployeeState = useLocation();
 
+  const [inputs, setInputs] = useState(EmployeeState.state);
   const EmployeeList = () => {
     axios
       .get("http://localhost:9090/employee")
@@ -36,9 +38,43 @@ function EmpCard() {
   //=============================================================
   return (
     <>
+      <div className="row" align="center" mt-5 mb-5>
+        <div className="col-12 col-md-4 mb-5 mt-5  text-Align-center">
+          <input type="text" placeholder="Emp No." name="empno" />
+          <button type="button" className="btn bg-primary mx-1">
+            {" "}
+            search{" "}
+          </button>
+          {""}
+        </div>
+
+        <div className="col-12 col-md-4 mb-1 mt-5" align="center">
+          <select className="btn bg-primary mx-4" forname="deptno">
+            <option value="P" selected>
+              Department
+            </option>
+            <option value="P">Production</option>
+            <option value="F">Finnace</option>
+            <option value="R">R</option>
+            <option value="S">Sale</option>
+          </select>
+
+          {/* <button type="button" className="btn bg-primary mx-4">
+            {" "}
+            Department{" "}
+          </button>
+          {""} */}
+        </div>
+        <div className="col-12 col-md-4 mb-5 mt-5" align="center">
+          <Link to="/Employee/add" className="btn bg-primary mx-2">
+            Add Employee
+          </Link>{" "}
+        </div>
+      </div>
+
       <div className="row justify-content-center" style={{ height: "300px" }}>
         <div
-          className="col-12 col-md-10 h3 "
+          className="col-12 col-md-0 h3 "
           style={{ fontFamily: "cursive", textAlign: "center" }}
         >
           Employee list

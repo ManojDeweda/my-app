@@ -64,7 +64,7 @@ function EmpDetailUpdateForm() {
               onChange={handleChange}
             />
           </div>
-          <div className="mb-3">
+          {/* <div className="mb-3">
             <label forName="ename" className="form-label">
               Employee Name:
             </label>
@@ -74,7 +74,7 @@ function EmpDetailUpdateForm() {
               value={inputs.ename}
               onChange={handleChange}
             />
-          </div>
+          </div> */}
           <div className="mb-3">
             <label forName="mobileNumber" className="form-label">
               Mobile Number:

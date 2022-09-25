@@ -17,7 +17,7 @@ function EmployeeAddFrom() {
 
   const handleSubmit = (evnt) => {
     evnt.preventDefault();
-    // alert(JSON.stringify(inputs));
+    alert(JSON.stringify(inputs));
 
     axios
       .post("http://localhost:9090/employee/", inputs, config)
@@ -56,6 +56,17 @@ function EmployeeAddFrom() {
               type="text"
               name="empno"
               value={inputs.empno}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="mb-3 mt-3">
+            <label forname="ename" className="form-label">
+              Employee Name:
+            </label>
+            <input
+              type="text"
+              name="ename"
+              value={inputs.ename}
               onChange={handleChange}
             />
           </div>
@@ -126,6 +137,15 @@ function EmployeeAddFrom() {
               value={inputs.hiredate}
               onChange={handleChange}
             />
+          </div>
+          <div>
+            <input
+              type="file"
+              name="PHOTO"
+              value={inputs.PHOTO}
+              onChange={handleChange}
+            />
+            <button>Upload!</button>
           </div>
           <button type="submit" className="btn btn-primary">
             Add

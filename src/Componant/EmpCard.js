@@ -81,22 +81,22 @@ function EmpCard() {
                       <th>EMAIL</th>
                       <td>{item.email}</td>
                     </tr>
-                    <tr>
+                    {/* <tr>
                       <th>HIREDATE</th>
                       <td>{item.hiredate}</td>
-                    </tr>
+                    </tr> */}
                     <tr>
                       <th>DEPT</th>
                       <td>{item.deptno}</td>
                     </tr>
-                    <tr>
+                    {/* <tr>
                       <th>JOB</th>
                       <td>{item.job}</td>
                     </tr>
                     <tr>
                       <th>CITY</th>
                       <td>{item.city}</td>
-                    </tr>
+                    </tr> */}
                   </thead>
                 </table>
                 <Link

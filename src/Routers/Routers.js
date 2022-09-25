@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Home from "../Pages/Home";
 import About from "../Pages/About";
 import Contact from "../Pages/Contact";
+import Service from "../Pages/Service";
 import Admin from "../Pages/Admin";
 import AdminLayout from "../Pages/employee/AdminLayout";
 import EmployeeList from "../Pages/employee/EmployeeList";
@@ -15,6 +16,7 @@ import EmpDetailAddForm from "../Pages/employee/details/EmpDetailAddForm";
 import EmpDetailUpdateForm from "../Pages/employee/details/EmpDetailUpdateForm";
 import EmpDetailsCard from "../Componant/EmpDetailsCard";
 import EmpCard from "../Componant/EmpCard";
+import Login from "../Pages/Login";
 const Routers = () => {
   return (
     <Routes>
@@ -23,7 +25,8 @@ const Routers = () => {
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/admin" element={<Admin />} />
-
+      <Route path="/service" element={<Service />} />
+      <Route path="/login" element={<Login />} />
       {/* <Route path="/" element={<Welcome />}></Route> */}
       <Route path="/employee/" element={<AdminLayout />}>
         <Route index element={<EmpCard />}></Route>

@@ -1,13 +1,16 @@
 import React from "react";
+import Common from "../Shared/Common";
+import web from "../Assets/images/home/image4.jpeg";
 
-import EmpCard from "../Componant/EmpCard";
-import EmpDetailsCard from "../Componant/EmpDetailsCard";
 function Home() {
   return (
     <>
-      <h1>For ADMIN Home page</h1>
-
-      <EmpDetailsCard />
+      <Common
+        name="Grow your business with"
+        imgsrc={web}
+        visit="/service"
+        btname="Get started"
+      />
     </>
   );
 }

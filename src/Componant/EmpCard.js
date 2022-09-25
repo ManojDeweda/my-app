@@ -67,9 +67,9 @@ function EmpCard() {
                   id={item.empno}
                   value={item.empno}
                   state={item}
-                  className="btn bg-primary"
+                  // className="btn bg-primary"
                 >
-                  {item.empno}
+                  <h3>{item.ename}</h3>
                 </Link>{" "}
                 <table className="table mt-2">
                   <thead>

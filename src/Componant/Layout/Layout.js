@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-
+import Navbar from "../Navbar";
 import Header from "../Header";
 
 import Footer from "../Footer";
@@ -9,7 +9,7 @@ const Layout = () => {
   return (
     <Fragment>
       <Fragment>
-        <Header />
+        <Navbar />
         <div>
           <Routers />
         </div>
